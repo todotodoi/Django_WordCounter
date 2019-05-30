@@ -1,0 +1,68 @@
+<!doctype html>
+{% load static %}
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title> WordCounter </title>
+    <link rel="stylesheet" href= "{% static 'css/style.css' %}">
+  </head>
+  <body>
+
+
+
+<!-- 네비게이션 바 -->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" href="{% url 'home' %}">
+    WordCounter</a>&nbsp;&nbsp;
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#"
+        id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false"><font size='5em'>
+            워드 카운터
+        </a></font>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'about' %}">소개</a>
+          <a class="dropdown-item" href="{% url 'start' %}">시작하기</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  </nav>
+
+
+<div class="container" style="text-align: center;
+            background-color: #FFFFFF;
+            padding-top: 100px;
+            padding-bottom: 200px;
+            justify-content: center;
+            height:500px;
+            align-items: center;">
+    <div style="display: inline-block;">
+    <h1 style="color: #000000; display: inline;"><font size = '50em'>About Word-Counter</h1></font>
+</div>
+<br><br><br>
+<section class="jumbotron text-center main2">
+    <div class="container">
+        <div style="display: flex;
+        justify-content: center;
+        align-items: center; margin-bottom: 20px;">
+        <img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/book-512.png" alt="" style="width: 50px; margin: 3px;">
+        <h1 class="jumbotron-heading title_in_main" style="display: inline-block; margin-bottom: 0px;">안녕하세요! 워드카운트 홈페이지입니다!</h1><img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/book-512.png" alt="" style="width: 50px; margin: 3px;">
+        </div>
+    <p class="lead text-muted"> 1. 단어의 개수를 셀 수 있습니다.</p>
+    <p class="lead text-muted"> 2. 글자 수 세기도 가능합니다.</p>
+    <p class="lead text-muted"> 3. 공백 포함, 공백 제거까지 가능!</p>
+    <p>
+        <a href="{% url 'start' %}" class="btn btn-secondary my-2">워드카운터 이용해보실래요?</a>
+    </p>
+    </div>
+</section>
